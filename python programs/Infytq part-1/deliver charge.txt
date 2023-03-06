@@ -1,0 +1,34 @@
+#lex_auth_012693782475948032141
+
+def calculate_bill_amount(food_type,quantity_ordered,distance_in_kms):
+    bill_amount=0
+    if(food_type=='V' and quantity_ordered>=1 and distance_in_kms>0):
+        bill_amount=quantity_ordered*120
+        if(distance_in_kms>6):
+            distance_in_kms-=6
+            bill_amount=bill_amount+(distance_in_kms*6)+9
+        elif(distance_in_kms>3 and distance_in_kms<=6):
+            distance_in_kms-=3
+            bill_amount+=distance_in_kms*3
+        else:
+            bill_amount=bill_amount
+    elif(food_type=='N' and quantity_ordered>=1 and distance_in_kms>0):
+        bill_amount=quantity_ordered*150
+        if( distance_in_kms>6):
+            distance_in_kms-=6
+            bill_amount=bill_amount+(distance_in_kms*6)+9
+        elif(distance_in_kms>3 and distance_in_kms<=6):
+            distance_in_kms-=3
+            bill_amount+=distance_in_kms*3
+        else:
+            bill_amount=bill_amount
+    else:
+        bill_amount=-1
+        
+        
+    #write your logic here
+    return bill_amount
+
+#Provide different values for food_type,quantity_ordered,distance_in_kms and test your program
+bill_amount=calculate_bill_amount("N",1,7)
+print(bill_amount)

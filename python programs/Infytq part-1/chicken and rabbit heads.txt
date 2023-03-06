@@ -1,0 +1,39 @@
+#lex_auth_012693810762121216155
+
+def solve(heads,legs):
+    error_msg="No solution"
+    if(heads<legs):
+        if(legs%2==0):
+            k=legs//2
+            rabbit_count=k-heads
+            chicken_count=heads-rabbit_count
+            print(chicken_count,rabbit_count)
+        elif(legs%4==0):
+            k=legs//4
+            rabbit_count=heads-k
+            chicken_count=heads-rabbit_count
+            print(chicken_count,rabbit_count)
+        elif(heads*4==legs):
+            rabbit_count=heads
+            chicken_count=0
+            print(chicken_count,rabbit_count)
+        elif(heads*2==legs):
+            chicken_count=heads
+            rabbit_count=0
+            print(chicken_count,rabbit_count)
+        else:
+            print(error_msg)
+    else:
+        print(error_msg)
+    #Start writing your code here
+    #Populate the variables: chicken_count and rabbit_count
+
+
+
+    # Use the below given print statements to display the output
+    # Also, do not modify them for verification to work
+
+    #print(error_msg)
+
+#Provide different values for heads and legs and test your program
+solve(400,1020)

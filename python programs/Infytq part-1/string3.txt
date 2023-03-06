@@ -1,0 +1,28 @@
+#lex_auth_012693825794351104168
+
+def find_common_characters(msg1,msg2):
+    commom_characters=''
+    if(msg1==msg2):
+        commom_characters=msg1
+    else:
+        for i in range(0,len(msg1)):
+            for j in range(0,len(msg2)):
+                if(msg1[i]==msg2[j]):
+                    if(msg1[i]==' '):
+                        pass
+                    else:
+                        commom_characters+=msg1[i]
+    #s1=set(commom_characters)
+    if(len(commom_characters)>0):
+        return commom_characters
+    else:
+        return -1
+        
+    
+                
+
+#Provide different values for msg1,msg2 and test your program
+msg1="moto"
+msg2="moto"
+common_characters=find_common_characters(msg1,msg2)
+print(common_characters)

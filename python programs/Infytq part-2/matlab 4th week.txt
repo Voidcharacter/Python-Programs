@@ -1,0 +1,11 @@
+
+
+
+
+
+function [top_left, top_right, bottom_left, bottom_right] = corners(val)
+top_left=val(1,1);
+top_right=val(1,end);
+bottom_left=val(end,1);
+bottom_right=val(end,end)
+end

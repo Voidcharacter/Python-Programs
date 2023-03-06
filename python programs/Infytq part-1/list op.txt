@@ -1,0 +1,142 @@
+#lex_auth_012693813706604544157
+
+def find_max(num1, num2):
+    length=num2-num1
+    li=[]
+    if(num2<num1):
+        max_num=-1
+    elif(num2>num1):
+        for i in range(num1,num2+1):
+            n=i
+            t=n
+            #print(t)
+            s=str(i)
+            #print(s)
+            sum=0
+            while(n>0):
+                temp=n%10
+                sum+=temp
+                n=n//10
+            if(len(s)==2 and t%5==0 and sum%3==0):
+                print(t)
+                li.append(t)
+            else:
+                max_num=-1
+        if(len(li)==0):
+            max_num=-1
+        else:
+            max_num=max(li)
+            
+            
+    else:
+        max_num=-1
+    # Write your logic here
+    return max_num
+
+#Provide different values for num1 and num2 and test your program.
+max_num=find_max(2,14)
+print(max_num)
+
+
+
+
+
+
+list_of_airlines=["AI","EM","BA"]
+
+print("Iterating the list using range()")
+for index in range(0,len(list_of_airlines)):
+    print(list_of_airlines[index])
+
+print("Iterating the list using keyword in")
+for airline in list_of_airlines:
+    print(airline)
+k=len(list_of_airlines)
+n=0
+while(n<k):
+    print(list_of_airlines[n])
+    n+=1
+
+#Note: Here "airline" is just another user defined variable. It is not a keyword.
+
+
+
+
+list_of_airlines=["AI","EM","BA"]
+
+airline="AI"
+if airline in list_of_airlines:
+    print("Airline found")
+else:
+    print("Airline not found")
+                                      
+
+
+
+list_of_airlines=["AI","SJ","JA","EM","AA"]
+new_list=list_of_airlines[1:4]
+print(new_list)
+new_list=list_of_airlines[-4:-1]
+print(new_list)
+new_list=list_of_airlines[1:-2]
+print(new_list)
+new_list=list_of_airlines[:5]
+print(new_list)
+new_list=list_of_airlines[-6:0]
+print(new_list)
+new_list=list_of_airlines[-7:2]
+print(new_list)
+new_list=list_of_airlines[-3:5]
+print(new_list)
+
+
+
+
+mark_list=[78,90,90,95,83,95]
+
+mark_pos=mark_list.index(90)
+print("Index position of mark 90:", mark_pos)
+
+mark_list.append(54)
+print("After adding new marks:",mark_list)
+
+mark_list.insert(2, 98)
+print("After inserting 98 at the 2nd index position:",mark_list)
+
+mark_list.pop(1)
+print("After removing the marks at the 1st index position:",mark_list)
+
+mark_list.remove(95)
+print("After removing the first occurence of 95 from the list:",mark_list)
+
+mark_list.sort()
+print("After sorting the marks in the given list:",mark_list)
+
+mark_list.reverse()
+print("After reversing the marks in the given list:",mark_list)
+
+
+
+
+#This is a list of lists
+#Stores airline and number of flights operated by them
+airline_details=[["AI",8], ["EM",10],["BA",7]]
+
+#To get the details of Emirates (EM) airline
+#Prints a list
+print(airline_details[1])
+
+#To get the number of flights operated by British Airways (BA)
+#[2][1] refers to 2nd list and 1st value, inside airline_details
+#Remember counting is 0 based
+print(airline_details[2][1])
+
+#To display the details of all airlines
+print("Airline details as a list:")
+for airline in airline_details:
+    print(airline)
+
+#To display the number of flights operated by each airline
+print("No. of flights operated by each airline:")
+for airline in airline_details:
+        print(airline[1])    

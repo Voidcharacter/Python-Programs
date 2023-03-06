@@ -1,0 +1,84 @@
+#Creating a string
+pancard_number="AABGT6715H"
+
+#Length of the string
+print("Length of the PAN card number:", len(pancard_number))
+
+#Concatenating two strings
+name1 ="PAN "
+name2="card"
+name=name1+name2
+print(name)
+
+print("Iterating the string using range()")
+for index in range(0,len(pancard_number)):
+    print(pancard_number[index])
+    
+print("Iterating the string using keyword in")
+for value in pancard_number:
+    print(value)
+
+print("Searching for a character in string")
+if "Z" in pancard_number:
+    print("Character present")
+else:
+    print("Character is not present")
+
+#Slicing a string
+print("The numbers in the PAN card number:", pancard_number[5:9])
+print("Last but one 3 characters in the PAN card:",pancard_number[-4:-1])
+
+pancard_number[2]="A" #This line will result in an error, i.e., string is immutable
+print(pancard_number)
+
+
+
+
+
+
+
+
+
+
+
+
+
+boarding_call="Good Evening, this is the final call to AI passengers for the flight AI 466 which is planned to take off at 8.40A.M. "
+
+if(boarding_call.startswith("Good Evening")):
+    print(boarding_call.replace("Good Evening","Good Morning"))
+
+if(boarding_call.find("AI"))>=0:
+    print("Welcome to Air India.")
+
+if(boarding_call.endswith("A.M.")):
+    print("Passengers are requested to have their breakfast.")
+
+a=boarding_call.split(" ")
+for i in a:
+    if(i.isdigit()):
+        print("Flight Number is specified to the passengers.")
+
+print("Total number of times flight service name is specified in the boarding call:",boarding_call.count("AI"))
+
+
+message="Thank you all..Have a nice journey!"
+
+print(message.upper())
+
+print(message.lower())
+
+
+
+
+
+
+
+row1 = (101,"Dallas",3.5)
+row2 = (102,"Atlanta",5.6)
+row3 = (103,"Tokyo",9.8)
+table = [row1,row2,row3]
+print(table[0])
+print(table[1])
+print(table[2])
+                                                        

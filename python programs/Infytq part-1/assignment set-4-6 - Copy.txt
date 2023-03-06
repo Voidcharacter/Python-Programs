@@ -1,0 +1,58 @@
+#lex_auth_0127382283825971201450
+
+def max_frequency_word_counter(data):
+    l=[]
+    word=''
+    frequency1=0
+    frequency2=0
+    l=data.split(' ')
+    frequency1=l.count(l[0])
+    frequency2=l.count(l[1])
+    if(frequency1>frequency2):
+        frequency2=0
+        word=l[0]
+    elif(frequency2>frequency1):
+        word=l[1]
+        frequency1=frequency2
+        frequency2=0
+    else:
+        if(len(l[0])>len(l[1])):
+            word=l[0]
+            frequency2=0
+        else:
+            word=l[1]
+            frequency1=frequency2
+            frequency2=0
+    for i in range(2,len(l)-1):
+        frequency2=l.count(l[i])
+        if(frequency2>frequency1):
+            frequency1=frequency2
+            frequency2=0
+            word=l[i]
+        elif(frequency2<frequency1):
+            frequency2=0
+        else:
+            if(len(word)>len(l[i])):
+                
+                frequency2=0
+            else:
+                word=l[i]
+                frequency1=frequency2
+                frequency2=0
+            
+        
+        
+                
+
+    #start writing your code here
+    #Populate the variables: word and frequency
+
+
+    # Use the below given print statements to display the output
+    # Also, do not modify them for verification to work
+    print(word,frequency1)
+
+
+#Provide different values for data and test your program.
+data="Work like you do not need money, love like you have never been hurt, and dance like no one is watching"
+max_frequency_word_counter(data)

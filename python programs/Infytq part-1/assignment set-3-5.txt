@@ -1,0 +1,18 @@
+#lex_auth_012693816331657216161
+
+def encode(message):
+    s=""
+    count=1
+    k=message+" "
+    for i in range(0,len(message)):
+        if(message[i]==k[i+1]):
+            count+=1
+        else:
+            s+=str(count)+message[i]
+            count=1
+        
+    #Remove pass and write your logic here
+    return s
+#Provide different values for message and test your program
+encoded_message=encode("ABBBBCCCCCCCCAB")
+print(encoded_message)
